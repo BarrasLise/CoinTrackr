@@ -81,12 +81,12 @@
       text-align: left;
       margin-left: 10px;
       display: grid;
-      grid-template-columns: 60px 1fr 30px;
+      grid-template-columns: 60px 100px 100px  30px;
       align-items: center;
 
       input[type="range"] {
         appearance: none;
-        width: 180px;
+        width: 90px;
         background: linear-gradient(90deg, $color1, #0debc6);
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         border-radius: 50px;
@@ -125,6 +125,26 @@
         img {
           height: 20px;
         }
+      }
+      .input-search {
+        width: 90px;
+        color: $white1;
+        // border: 1px solid $white2;
+        margin-left: 15px;
+        border-radius: 8px;
+        background-color: transparent;
+        padding-left : 5px;
+
+        @media screen and (max-width: 770px) {
+          display: none;
+        }
+
+        
+      }
+      .input-search:focus {
+        border: 1px solid $white2;
+        color: $white1;
+        
       }
     }
     input[type="radio"] {

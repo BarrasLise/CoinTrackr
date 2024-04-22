@@ -7,9 +7,13 @@ import { isStableCoin } from "./Utils";
 const Table = ({ coinsData }) => {
     const [rangeNumber, setRangeNumber] = useState(100);
     const [orderBy, setOrderBy] = useState("");
+    const [searchQuery, setSearchQuery] = useState("");
     const showStable = useSelector((state) => state.stableReducer.showStable); //recupere le true au false de l'input via le store de redux
     const showFavList = useSelector((state)=> state.listReducer.showList);
     const tableHeader = ["Prix", "MarketCap", "Volume", "1h", "1j", "1s", "1m", "6m", "1a", "ATH"];
+
+    console.log(searchQuery);
+    
 
     return (
         <div className="table-container">
@@ -17,6 +21,7 @@ const Table = ({ coinsData }) => {
                 <div className="range-container">
                     <span>Top <input type="text" value={rangeNumber} onChange={(e) => setRangeNumber(e.target.value)}/></span>
                     <input type="range" min="1" max="250" value={rangeNumber} onChange={(e) => setRangeNumber(e.target.value)}/>
+                    <input className="input-search" type="text"  placeholder="Recherche" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
                     <ToTop />
                 </div>
                 {tableHeader.map((el)=> (
@@ -37,6 +42,14 @@ const Table = ({ coinsData }) => {
                 ))}
             </ul>
             {coinsData && coinsData
+            .filter((coin) => {
+              if (searchQuery === "") {
+                  return coin; // Si la recherche est vide, retourne toutes les pièces
+              } else {
+                  // Sinon, vérifie si le nom ou le symbole de la pièce contient la valeur de recherche
+                  return coin.name.toLowerCase().includes(searchQuery.toLowerCase()) || coin.symbol.toLowerCase().includes(searchQuery.toLowerCase());
+              }
+            })
             .slice(0, rangeNumber)
             .filter((coin) => {
               if(showStable) {

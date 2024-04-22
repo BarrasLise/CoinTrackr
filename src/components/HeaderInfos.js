@@ -17,7 +17,7 @@ const HeaderInfos = () => {
         <div className="header-container">
             <ul className="title">
                 <li>
-                    <h1><img src="./assets/logo192.png" alt="logo"/> React coin</h1>
+                    <h1><img src="./assets/CoinTrackr.png" alt="logo"/> <span>CoinTrackr</span></h1>
                 </li>
                 <li>
                     Crypto-monnaies : {""}
