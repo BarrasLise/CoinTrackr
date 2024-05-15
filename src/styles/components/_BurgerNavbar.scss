@@ -1,0 +1,102 @@
+.navbar-container {
+    .nav-menu {
+        li {
+            color: $white1;
+        }
+    }
+
+    .burger-menu {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 999; 
+    }
+  
+    .burger-icon {
+      font-size: 20px;
+      color: $white1;
+    }
+
+    .burger-icon:hover {
+        color: $color1 ;
+    }
+  
+    .nav-menu {
+      list-style: none;
+      padding-top: 50px   ;
+      margin: 0;
+      position: absolute;
+      top: 0;
+      right: -200px; // Commence avec le menu en dehors de l'écran
+      width: 200px;
+      background-color: $grey2;
+      height: 100vh;
+      transition: right 0.3s ease; // Animation pour le déplacement du menu
+      z-index: 998;
+      
+    }
+  
+    .nav-menu.active {
+      left: 0; 
+    }
+  
+    .nav-link  {
+      display: block;
+      padding: 15px;
+      color: $white1;
+      text-decoration: none;
+      transition: background-color 0.3s ease; // Animation pour le changement de couleur de fond au survol
+    }
+    .home{
+      color: $white1;
+    }
+    
+  
+    .nav-link:hover {
+      background-color: $grey1; 
+    }
+ 
+  .nav-link.home:hover .sub-menu {
+    display: block;
+    list-style: none;
+  }
+
+  .sub-menu {
+    display: none; // Par défaut, cachez les sous-menus
+    padding: 0;
+  }
+  
+  .sub-link:hover {
+    background-color: rgb(56, 56, 55);
+  }
+  .sub-menu {
+    padding: 0; 
+}
+
+  .sub-menu li {
+    margin: 10px 0; 
+    }
+
+  .sub-menu li a {
+    display: block;
+    padding: 10px 10px 10px 10px;
+    color: $white1;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-left: 20px; 
+  }
+
+  .sub-menu li:hover {
+    background-color: rgb(56, 56, 55);
+  }
+
+  .sub-menu li.active a {
+    color: $color1;
+  }
+
+}
+  

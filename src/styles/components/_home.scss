@@ -1,0 +1,112 @@
+// .home-container {
+//     // background: linear-gradient(202deg, rgba(255,0,18,1) 0%, rgba(9,9,121,1) 24%, rgba(0,0,0,1) 50%, rgba(9,9,121,1) 77%, rgba(255,0,18,1) 100%);
+//     // background: linear-gradient(202deg, rgba(70,0,5,1) 0%, rgba(1,1,68,1) 24%, rgba(0,0,0,1) 50%, rgba(1,1,68,1) 77%, rgba(70,0,5,1) 100%);
+// }
+
+.anchor {
+    padding-top: 80px; 
+}
+.title {
+    margin-bottom: 10px;
+}
+.title2{
+    margin-bottom: 10px;
+}
+.title3{
+    margin-top: 20px;
+}
+
+.text {
+    margin-bottom: 20px;
+    // letter-spacing: 2px;
+    font-family: $font2;
+}
+
+.glossary-link {
+    color: $red1; /* Couleur des liens */
+    text-decoration: none;
+    transition: color 0.3s ease; 
+}
+
+.glossary-link:hover {
+   
+    margin-left: 10px;
+    margin-right: 10px;
+    color: $color2;
+    font-weight: bolder; /* Met en gras le texte au survol */
+}
+// .bienvenu{
+//     margin-top: 80px;
+//     background-image: url('../../../public/assets/bienvenu.jpg');
+//     background-size: cover; /* Ajuste la taille de l'image pour remplir la div */
+//     background-position: center; /* Centre l'image dans la div */
+//     // position: fixed;
+//     left: 0;
+//     width: 100%;
+//     height: 300px;
+//     position: relative;
+    
+// }
+
+.bienvenu p {
+    padding: 10px;
+    font-size: 45px; /* Augmentez la taille de la police */
+    color: white; /* Assurez-vous que le texte est bien contrasté avec l'image de fond */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ajoutez une ombre au texte pour améliorer la lisibilité */
+}
+
+.container1 {
+    margin-top: 80px;
+    // background-color: #676161; 
+    color: white; 
+    padding: 50px;
+    min-height: 100vh;
+}
+  
+.container2 {
+    // background-color: #555;
+    color: white; 
+    padding: 50px;
+    min-height: 100vh;
+}
+  
+.container3 {
+    // background-color: #777; 
+    color: white; // Texte blanc
+    padding:0 50px ;
+    min-height: 100vh;
+
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    height: 500px;
+    width: 500px;
+}
+  
+.circle.red {
+    background-color: rgba(255, 0, 0, 0.162); /* Rouge avec opacité */
+    box-shadow: 0 0 120px 110px rgba(255, 0, 0, 0.162); 
+}
+  
+.circle.gray {
+    // background-color: rgba(128, 128, 128, 0.162); 
+    // box-shadow: 0 0 120px 110px rgba(128, 128, 128, 0.162); 
+    right: 0;
+    background-color: rgba(128, 128, 128, 0.1); /* Gris avec opacité */
+    box-shadow: 0 0 120px 110px rgba(128, 128, 128, 0.05); 
+}
+.circle.blue {
+    background-color: rgb(13,236,188, 0.162); /* Gris avec opacité */
+    box-shadow: 0 0 120px 110px rgba(13, 236, 188, 0.162); 
+    right: 500px;
+}
+@media (max-width: 768px) {
+    .container1 {
+        margin-top: 70px;
+    }
+}
+
+
+

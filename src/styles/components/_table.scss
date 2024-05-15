@@ -121,6 +121,7 @@
       .top {
         margin: 0 !important;
         visibility: hidden;
+        padding-left: 30px;
 
         img {
           height: 20px;
@@ -237,7 +238,7 @@
 
         .chart-img {
           transform: translateY(2px);
-          z-index: 1000;
+          z-index: 997;
 
           @media screen and (max-width: 770px) {
             display: none;

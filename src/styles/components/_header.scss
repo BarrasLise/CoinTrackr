@@ -49,6 +49,12 @@ header {
           top: -8px;
         }
       }
+      .title-logo {
+        @media screen and (max-width: 715px) {
+          display: none;
+        }
+
+      }
       h1 {
         font-family: $font2;
         font-size: 1.5rem;

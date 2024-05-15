@@ -6,18 +6,33 @@ import TableFilters from "./TableFilters";
 const HeaderInfos = () => {
     const [headerData, setHeaderData] = useState([]);
 
-    useEffect(()=> {
-        axios
-            .get("https://api.coingecko.com/api/v3/global")
-            .then((res)=> setHeaderData(res.data.data));
+    useEffect(() => {
+        const fetchData = async () => {
+          try {
+            const res = await axios.get("https://api.coingecko.com/api/v3/global");
+            setHeaderData(res.data.data);
+          } catch (error) {
+            console.error("Error fetching data from Coingecko API:", error);
+          }
+        };
+      
+        // Mettre à jour les données toutes les 10 minutes
+        const intervalId = setInterval(fetchData, 10 * 60 * 1000);
 
-    }, []);
+        // Vérifier si les données sont déjà en cache
+        if (!headerData) {
+            fetchData(); // Si les données ne sont pas en cache, les récupérer
+        }
+      
+        // Nettoyer l'intervalle lors du démontage du composant
+        return () => clearInterval(intervalId);
+      }, [headerData]);
 
     return (
         <div className="header-container">
             <ul className="title">
                 <li>
-                    <h1><img src="./assets/CoinTrackr.png" alt="logo"/> <span>CoinTrackr</span></h1>
+                    <h1><img className="title-logo" src="./assets/CoinTrackr.png" alt="logo"/> <span>CoinTrackr</span></h1>
                 </li>
                 <li>
                     Crypto-monnaies : {""}

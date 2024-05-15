@@ -1,0 +1,172 @@
+// .tall-navbar-container {
+//     .tall-nav-menu {
+//         li {
+//             color: $white1;
+//         }
+//     }
+
+    
+  
+//     .tall-nav-menu {
+//       list-style: none;
+//       padding-top: 50px   ;
+//       margin: 0;
+//       position: absolute;
+//       top: 0;
+      
+//       width: 200px;
+//       background-color: $grey2;
+//       height: 100vh;
+//       transition: right 0.3s ease; // Animation pour le déplacement du menu
+//       z-index: 998;
+      
+//     }
+  
+//     .tall-nav-menu.active {
+//       left: 0; 
+//     }
+  
+//     .tall-nav-link  {
+      
+//       padding: 15px;
+//       color: $white1;
+//       text-decoration: none;
+//       transition: background-color 0.3s ease; // Animation pour le changement de couleur de fond au survol
+//     }
+//     .home{
+//       color: $white1;
+//     }
+    
+  
+//     .tall-nav-link:hover {
+//       background-color: $grey1; 
+//     }
+ 
+//   .tall-nav-link.home:hover .tall-sub-menu {
+//     display: block;
+//     list-style: none;
+//   }
+
+//   .tall-sub-menu {
+//     display: none; // Par défaut, cachez les sous-menus
+//     padding: 0;
+//   }
+  
+//   .tall-sub-link:hover {
+//     background-color: rgb(56, 56, 55);
+//   }
+//   .tall-sub-menu {
+//     padding: 0; 
+// }
+
+//   .tall-sub-menu li {
+//     margin: 10px 0; 
+//     }
+
+//   .tall-sub-menu li a {
+//     display: block;
+//     padding: 10px 10px 10px 10px;
+//     color: $white1;
+//     text-decoration: none;
+//     transition: background-color 0.3s ease;
+//     margin-left: 20px; 
+//   }
+
+//   .tall-sub-menu li:hover {
+//     background-color: rgb(56, 56, 55);
+//   }
+
+//   .tall-sub-menu li.active a {
+//     color: $color1;
+//   }
+
+// }
+  
+
+.tall-navbar-container {
+    background: rgba(20, 20, 20, 0.85);
+    border-radius: 14px;
+    box-shadow: $shadow;
+    backdrop-filter: blur(3px);
+    border-bottom: 2px solid $color1;
+    
+    position: fixed; /* Fixe en haut de la page */
+    top: 0; /* Collé en haut */
+    left: 0;
+    width: 100%;
+    z-index: 999; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px; 
+}
+  
+.logo-container img {
+    width: 50px; 
+}
+  
+.link-container {
+    display: flex; /* Affiche les éléments en ligne */
+    list-style: none; /* Supprime les puces */
+    margin: 0; /* Supprime les marges */
+    padding: 0; /* Supprime le remplissage */
+}
+.tall-ul {
+    display: flex;
+    flex-direction: row;
+    margin-right: 20px ;
+    margin-left: 20px;
+
+}
+  
+.tall-nav-link {
+    margin: 0 50px;
+    position: relative; 
+    color: $white1;
+}
+.home {
+    color: $white1;
+}
+
+.tall-nav-link:hover{
+    color: $red1;
+}
+  
+.tall-nav-link:hover .tall-sub-menu {
+    display: block; /* Affiche le sous-menu au survol */
+}
+  
+.tall-sub-menu {
+    display: none; 
+    position: absolute; 
+    top: 100%; 
+    left: 0; 
+    background-color: white; 
+    padding: 10px; 
+    border: 2px solid $color1; 
+    border-radius: 14px;
+}
+  
+.tall-sub-link {
+    display: block; 
+    text-decoration: none; 
+    color: black; 
+    padding: 5px;
+}
+  
+.tall-sub-link:hover {
+    background-color: red; /* Fond rouge au survol */
+    color: white; /* Texte blanc au survol */
+    border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+  .logo-container img {
+    width: 40px; /* Réduit la taille du logo pour les appareils mobiles */
+  }
+  
+  .tall-nav-link {
+    margin: 0 10px; /* Réduit encore plus l'espace entre les liens */
+  }
+}
+  
