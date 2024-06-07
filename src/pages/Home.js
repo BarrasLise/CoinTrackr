@@ -98,7 +98,7 @@ const Home = () => {
             </div> 
 
             <div id="section2" className="container2">
-                <h1 className="anchor title">Tableau des cryptomonnaies</h1>
+                <h1 className="anchor title-home">Tableau des cryptomonnaies</h1>
                 <p className="text">Au dessus du tableau vous trouverez les informations prinicpales comme le nombre actuelle des nombres de <a href="#cryptomonnaie" className="glossary-link">cryptomonnaies</a> actuellement dans le monde, etc. </p>
                 <p className="text">Vous trouverez également sur la droite lorsque vous vous visitez notre site, sur un grand écran, une Treemap (ou "carte des parts de marché" en français) affichant les performances des 25 premières cryptomonnaies, excluant celles qui ont peu d'évolution appelé également "<a href="#stablecoin" className="glossary-link">stablecoin</a>" en anglais. </p> 
                 {/* ----------------- Treemap --------------- */}
@@ -118,9 +118,9 @@ const Home = () => {
                 
                 <div className="circle gray"></div>
             </div>
-            
+
             <div id="section3" className="container3">
-                <h1 className="anchor title" >Glossaire</h1>
+                <h1 className="anchor title-home" >Glossaire</h1>
                 <div id="cryptomonnaie">
                     <h3 className="title3" >Cryptomonnaie :</h3>
                     <p className="text">Une cryptomonnaie est une forme de monnaie numérique qui utilise la cryptographie pour sécuriser ses transactions et pour contrôler la création de nouvelles unités. Contrairement aux monnaies traditionnelles comme l'euro ou le dollar, les cryptomonnaies sont généralement décentralisées, ce qui signifie qu'elles ne sont pas contrôlées par un gouvernement ou une banque centrale. Les cryptomonnaies peuvent être utilisées pour effectuer des transactions en ligne ou comme investissement, et elles sont stockées dans des portefeuilles numériques appelés portefeuilles de cryptomonnaies.</p>

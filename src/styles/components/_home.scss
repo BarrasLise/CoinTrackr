@@ -103,14 +103,19 @@
     display: inline-block; 
     opacity: 0;
     animation: slideInFromTopQuick 0.5s ease-out 2s forwards, spinAndBounce 3s ease-in-out 1 2.5s forwards;
-}
-
-h1 span {
     background: -webkit-linear-gradient(360deg, $color1, #0debc6) ;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 300%;
 }
+
+
+// h1 span {
+//     background: -webkit-linear-gradient(360deg, $color1, #0debc6) ;
+//     -webkit-background-clip: text;
+//     -webkit-text-fill-color: transparent;
+//     font-size: 300%;
+// }
 
 .bienvenu-text p.intro,
 .bienvenu-text p:not(.intro),
@@ -127,7 +132,7 @@ h1 span {
 .anchor {
     padding-top: 80px; 
 }
-.title {
+.title-home {
     margin-top: 20px ;
     margin-bottom: 10px;
    

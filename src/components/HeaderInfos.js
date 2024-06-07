@@ -31,6 +31,7 @@ const HeaderInfos = () => {
     return (
         <div className="header-container">
             <ul className="title">
+                
                 <li>
                     <h1><img className="title-logo" src="./assets/CoinTrackr.png" alt="logo"/> <span>CoinTrackr</span></h1>
                 </li>
