@@ -10,3 +10,4 @@ export default function stableReducer(state = initialState, action) {
             return state;
     }
 }
+

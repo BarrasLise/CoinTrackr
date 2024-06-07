@@ -1,6 +1,5 @@
 import { SET_LIST_DISPLAY } from "../action/list.action";
 
-
 const initialState = { showList: false };
 
 export default function listReducer(state = initialState, action) {
@@ -11,3 +10,4 @@ export default function listReducer(state = initialState, action) {
             return state;
     }
 }
+

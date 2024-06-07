@@ -29,7 +29,10 @@ const BurgerNavbar = () => {
     }, []);
 
     return ( 
-        <div className="navbar-container">
+        <div className="burger-navbar-container">
+            <div className="burger-logo-container">
+                <img src="./assets/CoinTrackrFullName.png" alt="logo" />
+            </div>
             {/* Bouton pour ouvrir/fermer le menu burger */}
             <button className="burger-menu" onClick={toggleMenu}>
                 {/* Utilisation d'une condition ternaire pour déterminer quelle classe appliquer */}

@@ -12,7 +12,7 @@ const Table = ({ coinsData }) => {
     const showFavList = useSelector((state)=> state.listReducer.showList);
     const tableHeader = ["Prix", "MarketCap", "Volume", "1h", "1j", "1s", "1m", "6m", "1a", "ATH"];
 
-    console.log(searchQuery);
+    // console.log(searchQuery);
     
 
     return (
@@ -53,12 +53,12 @@ const Table = ({ coinsData }) => {
             .slice(0, rangeNumber)
             .filter((coin) => {
               if(showStable) {
-                return coin; //retourne
+                return coin; // Retourne toutes les crypto-monnaies si le filtre StableCoin est activé
               } else {
                 if(isStableCoin(coin.symbol)){
-                  return coin;
+                  return coin; // Retourne la crypto-monnaie si elle est considérée comme stable
                 } else {
-                  return null;
+                  return null; // Retourne null si la crypto-monnaie n'est pas stable et que le filtre StableCoin est désactivé
                 }
               }
             })

@@ -1,33 +1,41 @@
-.navbar-container {
-    .nav-menu {
-        li {
-            color: $white1;
-        }
+.burger-navbar-container {
+  .burger-logo-container img  {
+    margin: 10px;
+    width: 70px; 
+  }
+
+  .nav-menu {
+    li {
+      color: $white1;
     }
+  }
 
     .burger-menu {
       background: none;
       border: none;
       cursor: pointer;
       padding: 10px;
+      margin-bottom: 10px;
       position: absolute;
       top: 10px;
-      left: 10px;
+      right: 10px;
       z-index: 999; 
+      text-align: right;
+      
     }
   
     .burger-icon {
-      font-size: 20px;
+      font-size: 40px;
       color: $white1;
+
+      &:hover {
+        color: $color1 ;
+      }
     }
 
-    .burger-icon:hover {
-        color: $color1 ;
-    }
-  
     .nav-menu {
       list-style: none;
-      padding-top: 50px   ;
+      padding-top: 70px   ;
       margin: 0;
       position: absolute;
       top: 0;
@@ -37,12 +45,19 @@
       height: 100vh;
       transition: right 0.3s ease; // Animation pour le déplacement du menu
       z-index: 998;
-      
+      display: none;
+      text-align: right; 
+
+      &.active {
+        right: 0; 
+        display: block;
+      }
     }
   
-    .nav-menu.active {
-      left: 0; 
-    }
+    // .nav-menu.active {
+    //   right: 0; 
+    //   display: block;
+    // }
   
     .nav-link  {
       display: block;
@@ -50,15 +65,17 @@
       color: $white1;
       text-decoration: none;
       transition: background-color 0.3s ease; // Animation pour le changement de couleur de fond au survol
+
+      &:hover {
+        background-color: $grey1; 
+      }
     }
     .home{
       color: $white1;
     }
     
   
-    .nav-link:hover {
-      background-color: $grey1; 
-    }
+   
  
   .nav-link.home:hover .sub-menu {
     display: block;
@@ -66,37 +83,131 @@
   }
 
   .sub-menu {
-    display: none; // Par défaut, cachez les sous-menus
+    display: none; 
     padding: 0;
   }
   
   .sub-link:hover {
     background-color: rgb(56, 56, 55);
   }
-  .sub-menu {
-    padding: 0; 
-}
+//   .sub-menu {
+//     padding: 0; 
+// }
 
   .sub-menu li {
     margin: 10px 0; 
+
+    &.active a {
+      color: $color1;
     }
 
-  .sub-menu li a {
-    display: block;
-    padding: 10px 10px 10px 10px;
-    color: $white1;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    margin-left: 20px; 
+    &:hover{
+      background-color: rgb(56, 56, 55);
+
+    }
+
+    & a {
+      display: block;
+      padding: 10px 10px 10px 10px;
+      color: $white1;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      // margin-left: 20px; 
+      margin-right: 20px;
+      text-align: right;
+    }
   }
 
-  .sub-menu li:hover {
-    background-color: rgb(56, 56, 55);
-  }
+  // .sub-menu li a {
+  //   display: block;
+  //   padding: 10px 10px 10px 10px;
+  //   color: $white1;
+  //   text-decoration: none;
+  //   transition: background-color 0.3s ease;
+  //   // margin-left: 20px; 
+  //   margin-right: 20px;
+  //   text-align: right;
+  // }
 
-  .sub-menu li.active a {
-    color: $color1;
-  }
+  // .sub-menu li:hover {
+  //   background-color: rgb(56, 56, 55);
+  // }
+
+  // .sub-menu li.active a {
+  //   color: $color1;
+  // }
 
 }
   
+
+// .burger-navbar-container {
+//   display: none;
+
+//   @media (max-width: 715px) {
+//     display: block;
+//   }
+
+//   .burger-logo-container img {
+//     margin: 10px;
+//     width: 70px; 
+//   }
+
+//   .nav-menu {
+//     list-style: none;
+//     padding-top: 70px;
+//     margin: 0;
+//     position: absolute;
+//     top: 0;
+//     right: -200px;
+//     width: 200px;
+//     background-color: $grey2;
+//     height: 100vh;
+//     transition: right 0.3s ease;
+//     z-index: 998;
+//     display: none;
+//     text-align: right; 
+
+//     &.active {
+//       right: 0; 
+//       display: block;
+//     }
+
+//     li {
+//       color: $white1;
+
+//       a {
+//         display: block;
+//         padding: 15px;
+//         color: $white1;
+//         text-decoration: none;
+//         transition: background-color 0.3s ease;
+
+//         &:hover {
+//           background-color: $grey1; 
+//         }
+//       }
+//     }
+//   }
+
+//   .burger-menu {
+//     background: none;
+//     border: none;
+//     cursor: pointer;
+//     padding: 10px;
+//     margin-bottom: 10px;
+//     position: absolute;
+//     top: 10px;
+//     right: 10px;
+//     z-index: 999; 
+//     text-align: right;
+
+//     .burger-icon {
+//       font-size: 40px;
+//       color: $white1;
+
+//       &:hover {
+//         color: $color1;
+//       }
+//     }
+//   }
+// }

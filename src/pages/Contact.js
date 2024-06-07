@@ -1,13 +1,13 @@
 import Navbar from "../components/Navbar.js"; 
 import React, { useEffect, useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
+// import BurgerNavbar from "../components/BurgerNavBar.js";
+import BurgerNavbar from "../components/BurgerNavbar.js";
 // import emailjs from '@emailjs/browser';
 
 const Contact = () => {
 
     const form = useRef();
-
-
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
@@ -97,7 +97,12 @@ const Contact = () => {
 
     return ( 
         <>
-        <Navbar />
+         <div className="navbar-container">
+            <Navbar/>
+        </div>
+        <div className="burger-navbar-container">
+            <BurgerNavbar/>
+        </div>
         <div className="contact-form">
             <h1>Contactez-nous</h1>
             <form ref={form} onSubmit={handleSubmit}>

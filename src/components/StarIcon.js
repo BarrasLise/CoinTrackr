@@ -16,11 +16,9 @@ const StarIcon = ( { coinId }) => {
 
     const idChecker = (id) => { //ajout retire du local storage d'id de la cryptomonnai
         let favList = null;
-
         if(window.localStorage.coinList) { //vérifie si cette liste du localstorage existe 
             favList = window.localStorage.coinList.split(","); 
         }
-
         if (favList) {
             if (favList.includes(id)) { //regarde si un id est déjà dans la liste
                 window.localStorage.coinList = favList.filter((coin) => coin !== id); 
@@ -34,8 +32,6 @@ const StarIcon = ( { coinId }) => {
             setLike(true);
         }
     }
-
-
     return (
         <img onClick={() => idChecker(coinId)} src={like ? "./assets/star-full.svg" : "./assets/star-empty.svg" } alt="icon-star"/>
     );

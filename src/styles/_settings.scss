@@ -60,6 +60,23 @@ label {
   user-select: none;
 }
 
+//gestion menu de navigation
+
+/* cacher le menu burger by default */
+.burger-navbar-container {
+  display: none;
+}
+
+/* Montrer le menu Burger et masquer la navbar normal en petit écran */
+@media (max-width: 715px) {
+  .navbar-container {
+      display: none;
+  }
+  .burger-navbar-container {
+      display: block;
+  }
+}
+
 .top {
   margin: 10px auto 30px;
   text-align: center;

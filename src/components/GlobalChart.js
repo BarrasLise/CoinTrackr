@@ -47,7 +47,7 @@ const GlobalChart = ({ coinsData }) => {
                 if (excludeCoin(coinsData[i].symbol)){ //vérifie si c'est une monnaie stable si oui on passe au suivant si non on la push dans notre tableau
                     chartData.push({
                         name : coinsData[i].symbol.toUpperCase() + " " + coinsData[i].market_cap_change_percentage_24h.toFixed(1) + "%",
-                        size : coinsData[i].market_cap,
+                        size : coinsData[i].market_cap, //
                         fill : colorPicker(coinsData[i].market_cap_change_percentage_24h), //couleur
                     });
                 }
@@ -74,10 +74,10 @@ const GlobalChart = ({ coinsData }) => {
                 width={730}
                 height={181}
                 data={dataArray}
-                dataKey="size"
+                dataKey="size" //indique que size est la donnée à utiliser pour definir la taille des blocs
                 stroke="rgb(51,51,51)"
                 fill="black"
-                aspectRatio="1"
+                aspectRatio="1" // rapport largeur/hauteur,  afin d'obtenir des formes carrées
             >
                 <Tooltip content={<TreemapToolTip />} />
             </Treemap>

@@ -1,17 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-
-
 import Crypto from "./pages/Crypto.js";
 import Home from "./pages/Home.js";
-
 import Contact from "./pages/Contact.js";
 
-
 const App = () => {
-
-  
 
   return (
     
