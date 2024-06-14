@@ -34,7 +34,9 @@ const Navbar = () => {
         <div className="tall-navbar-container">
 
             <div className="logo-container">
-                <img src="./assets/CoinTrackr.png" alt="logo" />
+                <NavLink to={"/"}>
+                    <img src="./assets/CoinTrackr.png" alt="logo" />
+                </NavLink>
             </div>
             
             <ul className="tall-ul"  ref={menuRef}>

@@ -16,6 +16,10 @@ header {
       "c c";
     padding-right: 10px;
 
+    @media screen and (max-width: 715px) {
+      margin-top: -90px;
+    }
+
     .title,
     .infos-mkt {
       background: rgba(20, 20, 20, 0.85);

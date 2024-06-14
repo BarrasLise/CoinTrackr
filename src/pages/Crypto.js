@@ -8,6 +8,7 @@ import GlobalChart from "../components/GlobalChart.js";
 import HeaderInfos from "../components/HeaderInfos.js";
 import BurgerNavbar from "../components/BurgerNavbar";
 import Navbar from "../components/Navbar.js";
+import Footer from "../components/Footer.js";
 
 
 const Crypto = () => {
@@ -63,21 +64,24 @@ const Crypto = () => {
   }, []);
 
   return (
+    <>
     <div className="app-container">
-        {/* <BurgerNavbar /> */}
-        <div className="navbar-container">
-            <Navbar/>
-        </div>
-        <div className="burger-navbar-container">
-            <BurgerNavbar/>
-        </div>
+      {/* <BurgerNavbar /> */}
+      <div className="navbar-container">
+        <Navbar />
+      </div>
+      <div className="burger-navbar-container">
+        <BurgerNavbar />
+      </div>
       <header>
         <HeaderInfos />
         <GlobalChart coinsData={coinsData} />
       </header>
-      <Table coinsData={coinsData}  />
+      <Table coinsData={coinsData} />
       <ToTop />
     </div>
+    <Footer />
+    </>
   );
 }
  

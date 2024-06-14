@@ -12,8 +12,9 @@ $red1: rgb(255, 111, 86);
 $red2: rgb(251, 69, 63);
 $white1: rgb(219, 217, 217);
 $white2: rgb(172, 172, 172);
-$black1: rgb(31, 31, 31);
-$black2: rgb(10, 10, 10);
+// $black1: rgb(31, 31, 31);
+$black1: rgb(10,10,10);
+$black2: rgb(17, 17, 17);
 $shadow: 0 5px 15px rgba(0, 0, 0, 0.322);
 $grey1: #555;
 $grey2 : #333;
@@ -40,7 +41,7 @@ html {
 
 body {
   // background: url(../assets/wave.svg) center/cover;
-  background-color: black;
+  background-color: $black1;
   background-size: 2000%;
   font-family: $font1;
   color: $white1;

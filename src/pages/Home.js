@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import BurgerNavbar from "../components/BurgerNavbar";
+import Footer from "../components/Footer";
 
 const Home = () => {
 
@@ -57,7 +58,7 @@ const Home = () => {
     return ( 
         // <div className="home-container">
         <>
-         <div className="navbar-container">
+        <div className="navbar-container">
             <Navbar/>
         </div>
         <div className="burger-navbar-container">
@@ -136,6 +137,11 @@ const Home = () => {
                 
                 <div className="circle blue "></div>
             </div>
+            
+            <Footer/>
+
+            
+       
             </>
 
         //  </div>

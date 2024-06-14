@@ -15,6 +15,7 @@
     }
     @media screen and (max-width: 715px) {
       grid-template-columns: 220px 80px repeat(4, 1fr);
+    
     }
     @media screen and (max-width: 540px) {
       grid-template-columns: 170px 80px repeat(4, 1fr);
@@ -30,11 +31,11 @@
     &.active {
       position: fixed;
       max-width: 1200px;
-      top: 0;
+      top: 80px;
       background: rgba(52, 52, 52, 0.8);
       backdrop-filter: blur(2px);
       opacity: 0;
-      top: -10px;
+      // top: -10px;
       animation: navAnim 0.3s forwards;
       border-bottom: 1px solid rgb(77, 77, 77);
 
@@ -137,7 +138,13 @@
         padding-left : 5px;
 
         @media screen and (max-width: 770px) {
-          display: none;
+          // display: none;
+          display: block;
+          margin: -40px 20px 20px 10px ;
+          width: 200px;
+          
+          height: 30px;
+          align-content: center;
         }
 
         
