@@ -11,22 +11,31 @@ const HeaderInfos = () => {
           try {
             const res = await axios.get("https://api.coingecko.com/api/v3/global");
             setHeaderData(res.data.data);
+            localStorage.setItem('headerData', JSON.stringify(res.data.data)); 
           } catch (error) {
             console.error("Error fetching data from Coingecko API:", error);
           }
         };
       
         // Mettre à jour les données toutes les 10 minutes
-        const intervalId = setInterval(fetchData, 10 * 60 * 1000);
+        const intervalId = setInterval(fetchData, 10 * 6 * 1000);
 
         // Vérifier si les données sont déjà en cache
-        if (!headerData) {
-            fetchData(); // Si les données ne sont pas en cache, les récupérer
+        // if (!headerData) {
+        //     fetchData(); // Si les données ne sont pas en cache, les récupérer
+        // }
+
+        // Vérifier si les données sont déjà en cache
+        const cachedData = localStorage.getItem('headerData');
+        if (cachedData) {
+        setHeaderData(JSON.parse(cachedData));
+        } else {
+        fetchData(); // Si les données ne sont pas en cache, les récupérer
         }
       
         // Nettoyer l'intervalle lors du démontage du composant
         return () => clearInterval(intervalId);
-      }, [headerData]);
+    }, []);
 
     return (
         <div className="header-container">

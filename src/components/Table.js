@@ -19,7 +19,7 @@ const Table = ({ coinsData }) => {
         <div className="table-container">
             <ul className="table-header">
                 <div className="range-container">
-                    <span>Top <input type="text" value={rangeNumber} onChange={(e) => setRangeNumber(e.target.value)}/></span>
+                    <span>Top <input aria-label="range-number" type="text" value={rangeNumber} onChange={(e) => setRangeNumber(e.target.value)}/></span>
                     <input type="range" min="1" max="250" value={rangeNumber} onChange={(e) => setRangeNumber(e.target.value)}/>
                     <input className="input-search" type="text"  placeholder="Recherche" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
                     <ToTop />

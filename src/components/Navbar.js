@@ -12,6 +12,7 @@ const Navbar = () => {
 
     // Fonction pour basculer l'état du menu burger
     const toggleMenu = (e) => {
+        window.scrollTo(0, 0);
         e.stopPropagation(); // Empêcher la propagation de l'événement de clic
         setIsMenuOpen(!isMenuOpen);
     };
@@ -34,7 +35,7 @@ const Navbar = () => {
         <div className="tall-navbar-container">
 
             <div className="logo-container">
-                <NavLink to={"/"}>
+                <NavLink to={"/"} onClick={()=> window.scrollTo(0, 0)}>
                     <img src="./assets/CoinTrackr.png" alt="logo" />
                 </NavLink>
             </div>

@@ -34,7 +34,7 @@ const BurgerNavbar = () => {
                 <img src="./assets/CoinTrackrFullName.png" alt="logo" />
             </div>
             {/* Bouton pour ouvrir/fermer le menu burger */}
-            <button className="burger-menu" onClick={toggleMenu}>
+            <button aria-label="burger-menu" className="burger-menu" onClick={toggleMenu}>
                 {/* Utilisation d'une condition ternaire pour déterminer quelle classe appliquer */}
                 {/* <span className={isMenuOpen ? "burger-icon open" : "burger-icon"}>{isMenuOpen ? " ": String.fromCharCode(9776)}</span> */}
                 {isMenuOpen ? <FaXmark className={isMenuOpen ? "burger-icon open" : "burger-icon"}/>: <FaAlignJustify className="burger-icon" />}
