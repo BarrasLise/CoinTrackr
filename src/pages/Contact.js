@@ -1,13 +1,11 @@
 import Navbar from "../components/Navbar.js"; 
 import React, { useEffect, useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
-// import BurgerNavbar from "../components/BurgerNavBar.js";
 import BurgerNavbar from "../components/BurgerNavbar.js";
 import Footer from "../components/Footer.js";
-// import emailjs from '@emailjs/browser';
+
 
 const Contact = () => {
-
     const form = useRef();
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -82,9 +80,6 @@ const Contact = () => {
         };
 
         emailjs
-            // .sendForm('service_7ww9yoi', 'template_orn1qsa', form.current, {
-            // publicKey: 'yfEhLlcMaZ2oQ7HSx',
-            // })
             .send('service_7ww9yoi', 'template_orn1qsa', templateParams, 'yfEhLlcMaZ2oQ7HSx')
             .then((response) => {
                 setSuccessMessage('Votre message a été envoyé avec succès!');
@@ -105,7 +100,6 @@ const Contact = () => {
         <div className="burger-navbar-container">
             <BurgerNavbar/>
         </div>
-        {/* <div className="form-container"> */}
         <div className="contact-form">
             <h1>Contactez-nous</h1>
             <form ref={form} onSubmit={handleSubmit}>
@@ -140,11 +134,8 @@ const Contact = () => {
             {successMessage && <p className="success-message">{successMessage}</p>}
             {errorMessage  && <p className="error-message">{errorMessage}</p>}
         </div>
-        {/* </div> */}
         <Footer/>
         </div>
-        
-
         </>
     );
 }

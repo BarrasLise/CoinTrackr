@@ -4,7 +4,7 @@ import colors from "../styles/_settings.scss";
 import { useWindowSize } from "./Utils";
 
 const GlobalChart = ({ coinsData }) => {
-    const { width } = useWindowSize(); // Obtenez la largeur de l'écran
+    const { width } = useWindowSize(); // Obtenir la largeur de l'écran
 
     console.log(coinsData);
     const [dataArray, setDataArray] = useState([]);
@@ -77,8 +77,6 @@ const GlobalChart = ({ coinsData }) => {
     return (
         <div className="global-chart">
             <Treemap
-                // width={730}
-                // height={181}
                 width={treemapWidth}
                 height={treemapHeight}
                 data={dataArray}

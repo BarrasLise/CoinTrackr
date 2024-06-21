@@ -11,10 +11,8 @@ const Table = ({ coinsData }) => {
     const showStable = useSelector((state) => state.stableReducer.showStable); //recupere le true au false de l'input via le store de redux
     const showFavList = useSelector((state)=> state.listReducer.showList);
     const tableHeader = ["Prix", "MarketCap", "Volume", "1h", "1j", "1s", "1m", "6m", "1a", "ATH"];
-
     // console.log(searchQuery);
     
-
     return (
         <div className="table-container">
             <ul className="table-header">

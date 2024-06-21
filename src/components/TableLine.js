@@ -23,7 +23,6 @@ const TableLine = ({ coin, index }) => {
         return Number(newNum.join(""));
     }
 
-
     return (
         <div className="table-line">
             <div className="infos-container">
@@ -64,7 +63,6 @@ const TableLine = ({ coin, index }) => {
             ) : (
                 <PercentChange percent={coin.ath_change_percentage} />
             )}
-
         </div>
     );
 };

@@ -21,16 +21,11 @@ const HeaderInfos = () => {
         const intervalId = setInterval(fetchData, 10 * 6 * 1000);
 
         // Vérifier si les données sont déjà en cache
-        // if (!headerData) {
-        //     fetchData(); // Si les données ne sont pas en cache, les récupérer
-        // }
-
-        // Vérifier si les données sont déjà en cache
         const cachedData = localStorage.getItem('headerData');
         if (cachedData) {
-        setHeaderData(JSON.parse(cachedData));
+            setHeaderData(JSON.parse(cachedData));
         } else {
-        fetchData(); // Si les données ne sont pas en cache, les récupérer
+            fetchData(); // Si les données ne sont pas en cache, les récupérer
         }
       
         // Nettoyer l'intervalle lors du démontage du composant
@@ -39,8 +34,7 @@ const HeaderInfos = () => {
 
     return (
         <div className="header-container">
-            <ul className="title">
-                
+            <ul className="title"> 
                 <li>
                     <h1><img className="title-logo" src="./assets/CoinTrackr.png" alt="logo"/> <span>CoinTrackr</span></h1>
                 </li>

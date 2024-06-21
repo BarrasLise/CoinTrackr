@@ -92,6 +92,9 @@
       @media screen and (max-width: 1120px) {
         grid-template-columns: 60px 100px 60px 30px;
       }
+      @media screen and (max-width: 770px) {
+        grid-template-columns: 60px 50px 0px 30px;
+      }
 
       input[type="range"] {
         appearance: none;
@@ -106,8 +109,9 @@
         cursor: pointer;
 
         @media screen and (max-width: 1150px) {
-          width: 70%;
+          width: 100%;
         }
+        
       }
       input[type="range"]::-webkit-slider-runnable-track {
         appearance: none;
@@ -144,6 +148,7 @@
         border-radius: 8px;
         background-color: transparent;
         padding-left : 5px;
+
         @media screen and (max-width: 1120px) {
           width: 60px;
           margin-left: 5px;

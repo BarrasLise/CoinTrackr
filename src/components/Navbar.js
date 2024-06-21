@@ -33,15 +33,12 @@ const Navbar = () => {
 
     return ( 
         <div className="tall-navbar-container">
-
             <div className="logo-container">
                 <NavLink to={"/"} onClick={()=> window.scrollTo(0, 0)}>
                     <img src="./assets/CoinTrackr.png" alt="logo" />
                 </NavLink>
             </div>
-            
             <ul className="tall-ul"  ref={menuRef}>
-               
                 <li className="tall-nav-link home">
                     <NavLink to="/" className="home"  onClick={toggleMenu}>Accueil</NavLink>
                     {/* Sous-menu déployé lorsque "Accueil" est survolé */}
@@ -67,7 +64,6 @@ const Navbar = () => {
                 </NavLink>
             </ul>
         </div>
-
     );
 }
  

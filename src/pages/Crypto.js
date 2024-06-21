@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-
 import axios from "axios";
 import {data} from "../db.js";
 import Table from "../components/Table.js";
@@ -11,8 +10,7 @@ import Navbar from "../components/Navbar.js";
 import Footer from "../components/Footer.js";
 
 
-const Crypto = () => {
-    
+const Crypto = () => { 
   const[coinsData, setCoinsData] = useState([]);
 
   useEffect(() => {
@@ -30,17 +28,7 @@ const Crypto = () => {
         .catch((error) =>
           console.error("Error fetching data from Coingecko API:", error)
         );
-
-      
     }
-
-    // window.addEventListener("scroll", () => { //evenement sur la navbar lors du scroll
-    //   if (window.scrollY >145) {
-    //     document.querySelector(".table-header").classList.add("active");
-    //   } else {
-    //     document.querySelector(".table-header").classList.remove("active");
-    //   }
-    // })
 
     const handleScroll = () => {
         const tableHeader = document.querySelector(".table-header");
@@ -58,15 +46,12 @@ const Crypto = () => {
       // Nettoyer l'écouteur d'événement lors du démontage du composant
       return () => {
         window.removeEventListener("scroll", handleScroll);
-    };
-
-    
+      };
   }, []);
 
   return (
     <>
     <div className="app-container">
-      {/* <BurgerNavbar /> */}
       <div className="navbar-container">
         <Navbar />
       </div>

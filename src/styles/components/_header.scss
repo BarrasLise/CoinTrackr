@@ -71,9 +71,6 @@ header {
         display: flex;
         align-items: center;
         justify-content: center;
-        // background: -webkit-linear-gradient(360deg, $color1, #0debc6);
-        // -webkit-background-clip: text;
-        // -webkit-text-fill-color: transparent;
         height: 36px;
 
         @media screen and (max-width: 1150px) {
@@ -177,9 +174,6 @@ header {
     overflow: hidden;
     box-shadow: $shadow;
 
-    // @media screen and (max-width: 1150px) {
-    //   display: none;
-    // }
     @media screen and (max-width: 1150px) {
       // display: none;
       max-width: 730px;
@@ -189,7 +183,6 @@ header {
       display: none;
       
     }
-
 
     text {
       font-size: 0.8rem !important;

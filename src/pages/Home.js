@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom";
 const Home = () => {
 
     useEffect(() => {
-        
+    
         const scrollToTerm = (termId) => {
             const termElement = document.getElementById(termId);
             if (termElement) {
@@ -63,7 +63,6 @@ const Home = () => {
         };
     }, []);
     return ( 
-        // <div className="home-container">
         <div className="home">
         <div className="navbar-container">
             <Navbar/>
@@ -107,9 +106,7 @@ const Home = () => {
                 </div>
             </section> 
             <section id="section2" className="container2">
-                
                 <h1 className="anchor title-home"><span>Explorer CoinTrackr</span></h1>
-                
                 <div className="monde-crypto">
                     <div className="image-container">
                         <img id="img-monde-crypto" src="./assets/Decouvrir-le-monde-des-cryptomonnaies.png" alt="Illustration monde crypto" />
@@ -146,7 +143,6 @@ const Home = () => {
                 <p className="text">
                     Vous trouverez également sur la droite de notre site, lorsqu'affiché sur un grand écran, une Treemap ("carte des parts de marché" en français) affichant les performances des 25 premières cryptomonnaies, excluant celles qui ont peu d'évolution, appelées "<a href="#stablecoin" className="glossary-link">stablecoin</a>".
                 </p>
-                
                 <h2 className="title2">La Treemap</h2>
                 <h3 className="title3">Comprendre la Treemap</h3>
                 <p className="text">
@@ -199,20 +195,16 @@ const Home = () => {
                 </p>
                 <div className="circle gray"></div>
             </section>
-
             <section id="section3" className="container3">
             <h1 className="anchor title-home" ><span>Glossaire</span></h1>
-
                 <div id="ath">
                     <h3 className="title3" >ATH - "All-Time High" :</h3>
                     <p className="text">C'est ce qui représente le plus haut niveau de prix historique atteint par une cryptomonnaie</p>
                 </div>
-
                 <div id="blockchain">
                     <h3 className="title3" >Blockchain :</h3>
                     <p className="text">La blockchain est comme un grand registre numérique partagé par de nombreuses personnes. Chaque fois qu'une transaction est effectuée (comme l'achat ou la vente de quelque chose), elle est enregistrée dans ce registre. Une fois qu'une page du registre est pleine de transactions, elle est verrouillée pour que personne ne puisse la modifier, et une nouvelle page est commencée. Ce registre est sécurisé et tout le monde peut voir son contenu, mais personne ne peut effacer ou altérer les pages déjà complétées. C'est une méthode extrêmement sûre pour enregistrer et suivre les transactions sans avoir besoin d'une banque ou d'un intermédiaire.</p>
                 </div>
-
                 <div id="captilisation-boursiere">
                     <h3 className="title3" >Capitalisation boursière :</h3>
                     <p className="text">C'est la valeur totale d'une cryptomonnaie sur le marché.</p>
@@ -233,17 +225,10 @@ const Home = () => {
                     <h3 className="title3" >Volume :</h3>
                     <p className="text">C'est le montant total de la cryptomonnaie échangé dans une période donnée.</p>
                 </div>
-                
                 <div className="circle blue "></div>
             </section>
-            
             <Footer/>
-
-            
-       
             </div>
-
-        //  </div>
      );
 }
  

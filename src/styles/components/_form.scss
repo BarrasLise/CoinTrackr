@@ -2,35 +2,30 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    // align-items: center;
     justify-content: space-between;
     min-height: 100vh;
-    // padding-bottom: 80px; 
     box-sizing: border-box;
 }
 .contact-form {
     margin: 20% auto;
-    background-color: #333; // Dark grey background
-    border: 1px solid #444; // Slightly darker border
+    background-color: #333; 
+    border: 1px solid #444; 
     border-radius: 8px;
     padding: 20px;
-    // width: 100vh;
-    
     max-width: 400px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #fff; // White text
+    color: #fff; 
 
     h1 {
         margin-bottom: 20px;
-        color: #fff; // White text
+        color: #fff; 
     }
 
     form {
-        
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -51,10 +46,10 @@
                 max-width: 100%; 
                 padding: 10px;
                 margin-top: 5px;
-                border: 1px solid #555; // Darker grey border
+                border: 1px solid #555; 
                 border-radius: 4px;
-                background-color: #222; // Very dark background
-                color: #fff; // White text
+                background-color: #222; 
+                color: #fff; 
                 font-size: 16px;
             }
         }
@@ -63,14 +58,14 @@
             padding: 10px;
             border: none;
             border-radius: 4px;
-            background-color: #e50914; // Red button
-            color: #fff; // White text
+            background-color: #e50914; 
+            color: #fff; 
             font-size: 16px;
             cursor: pointer;
             transition: background-color 0.3s;
 
             &:hover {
-                background-color: #b20710; // Darker red on hover
+                background-color: #b20710; 
             }
         }
     }
@@ -85,13 +80,13 @@
     }
 
     .success-message {
-        background-color: #4CAF50; // Green background
-        color: #fff; // White text
+        background-color: #4CAF50; 
+        color: #fff;
     }
 
     .error-message {
-        background-color: #f44336; // Red background
-        color: #fff; // White text
+        background-color: #f44336; 
+        color: #fff; 
     }
 }
 

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 
+//fonction qui vérifie si la cryptomonnaie fait partie des stablecoins
 export const isStableCoin = (coin) => {
     let stables = [
       "usdt",
@@ -37,6 +38,7 @@ export const isStableCoin = (coin) => {
     }
   };
   
+  //fonction qui calcule la taille de l'écran
   export const useWindowSize = () => {
     const [windowSize, setWindowSize] = useState({
       width: window.innerWidth,
