@@ -177,9 +177,19 @@ header {
     overflow: hidden;
     box-shadow: $shadow;
 
+    // @media screen and (max-width: 1150px) {
+    //   display: none;
+    // }
     @media screen and (max-width: 1150px) {
-      display: none;
+      // display: none;
+      max-width: 730px;
+      margin: 10px auto ;
     }
+    @media screen and (max-width: 520px) {
+      display: none;
+      
+    }
+
 
     text {
       font-size: 0.8rem !important;

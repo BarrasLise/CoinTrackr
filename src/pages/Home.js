@@ -162,13 +162,15 @@ const Home = () => {
                     <li className="circle-list " >Le vert clair montre une augmentation importante.</li>
                 </ul>
                 <p className="text">
-                    Explorez la treemap en détail et découvrez les tendances actuelles du marché !
+                    Explorez la treemap* en détail et découvrez les tendances actuelles du marché !
                 </p>
                 <div className="center-container">
                     <NavLink to="/crypto" className="tall-nav-link" onClick={()=> window.scrollTo(0, 0)}>
                         <button href="/crypto" className="button">Voir la Treemap</button>
                     </NavLink> 
                 </div>
+                <p className="text">
+                *Veuillez noter que la visualisation de la treemap n'est actuellement pas disponible en format vertical sur les appareils mobiles. Pour une meilleure expérience, nous vous recommandons de passer votre appareil en mode paysage. </p>
                 <h2 className="title2">Le tableau</h2>
                 <p className="text">
                     Le tableau principal offre plusieurs options de filtrage, notamment par :

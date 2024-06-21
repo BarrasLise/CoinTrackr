@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Tooltip, Treemap } from "recharts";
 import colors from "../styles/_settings.scss";
+import { useWindowSize } from "./Utils";
 
 const GlobalChart = ({ coinsData }) => {
+    const { width } = useWindowSize(); // Obtenez la largeur de l'écran
 
     console.log(coinsData);
     const [dataArray, setDataArray] = useState([]);
@@ -68,11 +70,17 @@ const GlobalChart = ({ coinsData }) => {
         return null;
     }
 
+    // Définir la largeur et la hauteur en fonction de la taille de l'écran
+    const treemapWidth = width <= 768 ? 500 : 730;
+    const treemapHeight = width <= 768 ? 124 : 181;
+
     return (
         <div className="global-chart">
             <Treemap
-                width={730}
-                height={181}
+                // width={730}
+                // height={181}
+                width={treemapWidth}
+                height={treemapHeight}
                 data={dataArray}
                 dataKey="size" //indique que size est la donnée à utiliser pour definir la taille des blocs
                 stroke="rgb(51,51,51)"
