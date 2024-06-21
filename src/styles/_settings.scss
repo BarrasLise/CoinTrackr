@@ -70,6 +70,7 @@ label {
 
 /* Montrer le menu Burger et masquer la navbar normal en petit écran */
 @media (max-width: 715px) {
+  
   .navbar-container {
       display: none;
   }

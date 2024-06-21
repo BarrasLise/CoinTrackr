@@ -13,3 +13,11 @@
     left: 50%;
     transform: translateX(-50%);
 }
+
+@media (max-width: 768px) {
+    .footer {
+        transform: none;
+        left: 0;
+    }
+
+}

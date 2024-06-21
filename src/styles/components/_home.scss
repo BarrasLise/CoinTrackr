@@ -317,6 +317,7 @@
     height: 500px;
     width: 500px;
     z-index: -1;
+    max-width: 100%;
 }
   
 .circle.red {
@@ -349,6 +350,7 @@
 
     .bienvenu {
         flex-direction: column;
+        align-items: stretch;
         & span {
             text-align: center;
             padding-left: 30px;
@@ -359,13 +361,55 @@
             text-align: center; 
             margin-top: 20px; 
             min-width: initial;
+            font-size: 25px;
         }
 
         & img {
             margin: auto;
-            height: 400px;
+            height: 250px;
             width: auto;
         }
+    }
+    .bienvenu-text span {
+        font-size: 250%;
+        padding-left: 0;
+    }
+    .text {
+        font-size: 100%;
+    }
+    .paragraphe-img {
+        flex-wrap: wrap;
+    }
+    .monde-crypto {
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        & img {
+            height: 250px;
+            margin-left: 0;
+        }
+
+        & .text {
+            margin: 10px 10px;
+        }
+    }
+
+
+    .circle {
+        height: 300px;
+        width: 300px;
+    }
+
+    .circle.red {
+        box-shadow: 0 0 60px 55px rgba(255, 0, 0, 0.162);
+    }
+
+    .circle.gray {
+        box-shadow: 0 0 60px 55px rgba(128, 128, 128, 0.17);
+    }
+
+    .circle.blue {
+        box-shadow: 0 0 60px 55px rgba(0, 100, 148, 0.17);
     }
 }
 
