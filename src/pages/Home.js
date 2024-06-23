@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import BurgerNavbar from "../components/BurgerNavbar";
 import Footer from "../components/Footer";
 import { NavLink } from "react-router-dom";
+import ToTop from "../components/ToTop";
 
 const Home = () => {
 
@@ -123,7 +124,7 @@ const Home = () => {
                             Depuis le menu, en cliquant sur la page "Cryptomonnaies", vous serez dirigé vers une page où se trouvent :
                         </p>
                         <ul className="text circle-list">
-                            <li className="circle-list " >Une treemap interactive affichant les performances des 45 premières cryptomonnaies.</li>
+                            <li className="circle-list " >Une <a href="#treemap" className="glossary-link">treemap</a> interactive affichant les performances des 45 premières cryptomonnaies.</li>
                             <li className="circle-list " >Un tableau interactif affichant les 250 cryptomonnaies les plus connues.</li>
                         </ul>
                     </div>
@@ -141,12 +142,12 @@ const Home = () => {
                     Au-dessus du tableau, vous trouverez les informations principales, comme le nombre actuel de cryptomonnaies dans le monde.
                 </p>
                 <p className="text">
-                    Vous trouverez également sur la droite de notre site, lorsqu'affiché sur un grand écran, une Treemap ("carte des parts de marché" en français) affichant les performances des 25 premières cryptomonnaies, excluant celles qui ont peu d'évolution, appelées "<a href="#stablecoin" className="glossary-link">stablecoin</a>".
+                    Vous trouverez également sur la droite de notre site, lorsqu'affiché sur un grand écran, une treemap ("carte des parts de marché" en français) affichant les performances des 45 premières cryptomonnaies, excluant celles qui ont peu d'évolution, appelées "<a href="#stablecoin" className="glossary-link">stablecoin</a>".
                 </p>
                 <h2 className="title2">La Treemap</h2>
                 <h3 className="title3">Comprendre la Treemap</h3>
                 <p className="text">
-                    1. Rectangles et tailles : Chaque rectangle dans la treemap représente une cryptomonnaie, sa taille étant proportionnelle à sa valeur respective. Ainsi, plus un rectangle est grand, plus la valeur de la cryptomonnaie qu'il représente est élevée. Par exemple, Bitcoin (BTC), avec une dominance de marché supérieure à 50 % actuellement, est le plus grand rectangle dans la treemap. Sa taille est telle qu'il occupe près de la moitié de l'espace total de la treemap.
+                    1. Rectangles et tailles : Chaque rectangle dans la treemap représente une cryptomonnaie, sa taille étant proportionnelle à sa valeur respective. Ainsi, plus un rectangle est grand, plus la valeur de la cryptomonnaie qu'il représente est élevée. Par exemple, Bitcoin (BTC), avec une dominance de marché supérieure à 50 % actuellement, est le plus grand rectangle dans la treemap. Sa taille est telle qu'il occupe près de la moitié de l'espace total de la <a href="#treemap" className="glossary-link">treemap</a>.
                 </p>
                 <p className="text">
                     2. Couleurs : Les couleurs indiquent la performance globale sur le marché.
@@ -165,7 +166,7 @@ const Home = () => {
                         <button href="/crypto" className="button">Voir la Treemap</button>
                     </NavLink> 
                 </div>
-                <p className="text">
+                <p className="text-info">
                 *Veuillez noter que la visualisation de la treemap n'est actuellement pas disponible en format vertical sur les appareils mobiles. Pour une meilleure expérience, nous vous recommandons de passer votre appareil en mode paysage. </p>
                 <h2 className="title2">Le tableau</h2>
                 <p className="text">
@@ -174,9 +175,9 @@ const Home = () => {
                 <ul className="text circle-list">
                     <li className="circle-list " >Nom</li>
                     <li className="circle-list " >Prix</li>
-                    <li className="circle-list " >Capitalisation boursière</li>
-                    <li className="circle-list " >Volume </li>
-                    <li className="circle-list " >Évolution sur différentes périodes de temps (1h, 1j, 1s, 1m, 6m, 1 an et ATH)</li>
+                    <li className="circle-list " ><a href="#capitalisationboursiere" className="glossary-link">Capitalisation boursière</a></li>
+                    <li className="circle-list " ><a href="#volume" className="glossary-link">Volume</a></li>
+                    <li className="circle-list " >Évolution sur différentes périodes de temps (1h, 1j, 1s, 1m, 6m, 1an et <a href="#ath" className="glossary-link">ATH</a>)</li>
                 </ul>
                 <p className="text">
                     De plus, un petit bouton "Info" est disponible pour chaque cryptomonnaie, vous permettant d'accéder à une page sur le site de CoinGecko* pour obtenir plus d'informations sur la cryptommonaie. </p>
@@ -205,7 +206,7 @@ const Home = () => {
                     <h3 className="title3" >Blockchain :</h3>
                     <p className="text">La blockchain est comme un grand registre numérique partagé par de nombreuses personnes. Chaque fois qu'une transaction est effectuée (comme l'achat ou la vente de quelque chose), elle est enregistrée dans ce registre. Une fois qu'une page du registre est pleine de transactions, elle est verrouillée pour que personne ne puisse la modifier, et une nouvelle page est commencée. Ce registre est sécurisé et tout le monde peut voir son contenu, mais personne ne peut effacer ou altérer les pages déjà complétées. C'est une méthode extrêmement sûre pour enregistrer et suivre les transactions sans avoir besoin d'une banque ou d'un intermédiaire.</p>
                 </div>
-                <div id="captilisation-boursiere">
+                <div id="capitalisationboursiere">
                     <h3 className="title3" >Capitalisation boursière :</h3>
                     <p className="text">C'est la valeur totale d'une cryptomonnaie sur le marché.</p>
                 </div>
@@ -227,6 +228,10 @@ const Home = () => {
                 </div>
                 <div className="circle blue "></div>
             </section>
+            <div className="home-totop">
+                <ToTop/>
+            </div>
+            
             <Footer/>
             </div>
      );

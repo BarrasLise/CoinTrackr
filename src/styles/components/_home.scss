@@ -405,6 +405,13 @@
     .circle.blue {
         box-shadow: 0 0 60px 55px rgba(0, 100, 148, 0.17);
     }
+
+    .home-totop {
+        position: fixed;
+        bottom: 22px;
+        right: 20px;
+        z-index: 1001;
+    }
 }
 
 
