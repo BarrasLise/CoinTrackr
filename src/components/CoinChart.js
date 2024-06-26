@@ -26,7 +26,19 @@ const CoinChart = ({ coinId, coinName}) => {
                 let price = res.data.prices[i][1]
 
                 dataArray.push({
-                    date : new Date(res.data.prices[i][0]).toLocaleDateString(),
+                    date: new Date(res.data.prices[i][0]).toLocaleDateString('fr-FR', {
+                        year: 'numeric',
+                        month: '2-digit',
+                        day: '2-digit'
+                    }),
+                    fullDate: new Date(res.data.prices[i][0]).toLocaleString('fr-FR', {
+                        year: 'numeric',
+                        month: '2-digit',
+                        day: '2-digit',
+                        hour: '2-digit',
+                        minute: '2-digit',
+                        second: '2-digit'
+                    }),
                     price : price < "50" ? price : parseInt(price)  //price n'est pas tjrs un entier
                 })
                 setCoinsData(dataArray);
@@ -69,7 +81,13 @@ const CoinChart = ({ coinId, coinName}) => {
                     <XAxis dataKey="date" />
                     <YAxis domain={["auto", "auto"]} />
                     <CartesianGrid strokeDasharray="3 3" />
-                    <Tooltip />
+                    <Tooltip
+                    formatter={(value) => `${value}`}
+                    labelFormatter={(label, props) => {
+                        const fullDate = props.length > 0 ? props[0].payload.fullDate : '';
+                        return fullDate;
+                    }}
+                    />
                     <Area
                     type="monotone"
                     dataKey="price"
