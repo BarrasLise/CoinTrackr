@@ -8912,5 +8912,5 @@ export const data = [
     "price_change_percentage_24h_in_currency": -0.6521408227209918,
     "price_change_percentage_30d_in_currency": -5.6961959645451685,
     "price_change_percentage_7d_in_currency": -1.1772329512995552
-  
+  },
   ];
