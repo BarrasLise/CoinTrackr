@@ -81,3 +81,5 @@ Coin price chart : `https://api.coingecko.com/api/v3/coins/${coinId}/market_char
 Coingecko : `https://www.coingecko.com/fr/pi%C3%A8ces/`
 
 ---------------------------------------------------------------------------------------------------------------------------------# CoinTrackr
+
+Ce porjet a été réaliser comme Travail de Fin d'Etude (TFE). 
